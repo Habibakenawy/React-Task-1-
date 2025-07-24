@@ -1,0 +1,60 @@
+.starDivider {
+  background-color: #1abc9c;
+  padding: 10px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.line {
+  height: 4px;
+  background-color: white;
+  flex-grow: 1;
+  margin: 0 8px; 
+}
+
+.starIcon i {
+  font-size: 20px;
+  color: white;
+}
+
+
+.portfolioItem {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.portfolioImage {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(26, 188, 156, 0.8); 
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 2rem;
+}
+
+.portfolioItem:hover .overlay {
+  opacity: 1;
+}
+
+.portfolioItem:hover .portfolioImage {
+  transform: scale(1.05);
+}
